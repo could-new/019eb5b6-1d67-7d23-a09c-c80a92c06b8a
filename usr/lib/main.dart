@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'package:couldai_user_app/integrations/supabase.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SupabaseConfig.ensureInitialized();
   runApp(const TodoApp());
 }
 
